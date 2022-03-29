@@ -11,11 +11,11 @@ import { useRouter } from "next/router";
 export default function Index() {
   const router = useRouter();
   const auth = useSelector((state) => state.auth);
-  // React.useEffect(() => {
-  // if (!auth._id) {
-  // router.push("/signup");
-  // }
-  // }, [auth]);
+  React.useEffect(() => {
+    if (!auth._id) {
+      router.push("/signup");
+    }
+  }, [auth]);
 
   const [todo, setTodo] = React.useState({
     name: "",
